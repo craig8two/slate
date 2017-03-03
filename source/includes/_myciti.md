@@ -3,7 +3,7 @@
 ## Get MyCiti routes
 
 ```javascript
-GET: "pro.gometro.co.za/api/v1/myciti/routes"
+GET: "http://proserver.gometro.co.za/api/v1/myciti/routes"
 ```
 
 ```ruby
@@ -28,42 +28,32 @@ curl "http://example.com/api/kittens/2"
 > The above command returns JSON structured like this:
 
 ```json
-{
-  "routes_announcements": [
-    {
-      "event_id": "8730289",
-      "create_date": "2017-03-02 15:31:03",
-      "creator_id": "2191264",
-      "type_id": "126",
-      "message_id": "8730288",
-      "receiver": "routes",
-      "receiver_id": "90000160",
-      "portal_id": "",
-      "target_id": "90000160",
-      "target2_id": "",
-      "use_grouping": "0",
-      "title": "Minor Delays",
-      "message": "Cancellations due to sets out of service and maintenance: Train no 0557 the 16:22 train from Cape Town to Heathfield, train no 0558 the 17:08 train from Heathfield to Cape Town, train no 0571 the 17:56 train from Cape Town to Heathfield and train no 0572 the 18:41 train from Heathfield to Cape Town. Trains on the Cape Flats line are delayed between 15-20 minutes due to ongoing technical problem at Pinelands.",
-      "user_name": "Western Cape Metrorail"
-    },
-    {
-      "event_id": "8730247",
-      "create_date": "2017-03-02 15:21:05",
-      "creator_id": "2191264",
-      "type_id": "126",
-      "message_id": "8730246",
-      "receiver": "routes",
-      "receiver_id": "90000160",
-      "portal_id": "",
-      "target_id": "90000160",
-      "target2_id": "",
-      "use_grouping": "0",
-      "title": "Other Announcement",
-      "message": "Cancellations due to sets out of service and maintenance: Train no 0557 the 16:22 train from Cape Town to Heathfield, train no 0558 the 17:08 train from Heathfield to Cape Town, train no 0571 the 17:56 train from Cape Town to Heathfield and train no 0572 the 18:41 train from Heathfield to Cape Town.",
-      "user_name": "Western Cape Metrorail"
-    }
-  ]
-}
+[
+  {
+    "id": "10:1101",
+    "shortName": "D01",
+    "longName": "Khayelitsha East - Civic Centre",
+    "mode": "TRAM",
+    "color": "f0648b",
+    "agencyName": "MyCiti"
+  },
+  {
+    "id": "10:1103",
+    "shortName": "D03",
+    "longName": "Mitchells Plain East - Civic Centre",
+    "mode": "TRAM",
+    "color": "74c599",
+    "agencyName": "MyCiti"
+  },
+  {
+    "id": "10:2001",
+    "shortName": "A01",
+    "longName": "Airport - Civic Centre",
+    "mode": "TRAM",
+    "color": "899AA5",
+    "agencyName": "MyCiti"
+  }
+]
 ```
 
 This endpoint retrieves MyCiti routes.
@@ -80,7 +70,7 @@ There are no query parameters for this endpoint.
 ## Get MyCiti stops by route
 
 ```javascript
-GET: "pro.gometro.co.za/api/v1/myciti/routes/234544/stops"
+GET: "http://proserver.gometro.co.za/api/v1/myciti/routes/10:1101/stops"
 ```
 
 ```ruby
@@ -105,42 +95,32 @@ curl "http://example.com/api/kittens/2"
 > The above command returns JSON structured like this:
 
 ```json
-{
-  "routes_announcements": [
-    {
-      "event_id": "8730289",
-      "create_date": "2017-03-02 15:31:03",
-      "creator_id": "2191264",
-      "type_id": "126",
-      "message_id": "8730288",
-      "receiver": "routes",
-      "receiver_id": "90000160",
-      "portal_id": "",
-      "target_id": "90000160",
-      "target2_id": "",
-      "use_grouping": "0",
-      "title": "Minor Delays",
-      "message": "Cancellations due to sets out of service and maintenance: Train no 0557 the 16:22 train from Cape Town to Heathfield, train no 0558 the 17:08 train from Heathfield to Cape Town, train no 0571 the 17:56 train from Cape Town to Heathfield and train no 0572 the 18:41 train from Heathfield to Cape Town. Trains on the Cape Flats line are delayed between 15-20 minutes due to ongoing technical problem at Pinelands.",
-      "user_name": "Western Cape Metrorail"
-    },
-    {
-      "event_id": "8730247",
-      "create_date": "2017-03-02 15:21:05",
-      "creator_id": "2191264",
-      "type_id": "126",
-      "message_id": "8730246",
-      "receiver": "routes",
-      "receiver_id": "90000160",
-      "portal_id": "",
-      "target_id": "90000160",
-      "target2_id": "",
-      "use_grouping": "0",
-      "title": "Other Announcement",
-      "message": "Cancellations due to sets out of service and maintenance: Train no 0557 the 16:22 train from Cape Town to Heathfield, train no 0558 the 17:08 train from Heathfield to Cape Town, train no 0571 the 17:56 train from Cape Town to Heathfield and train no 0572 the 18:41 train from Heathfield to Cape Town.",
-      "user_name": "Western Cape Metrorail"
-    }
-  ]
-}
+[
+  {
+    "id": "10:348",
+    "name": "Lindela",
+    "lat": -34.056993,
+    "lon": 18.69717033
+  },
+  {
+    "id": "10:29",
+    "name": "Civic Centre",
+    "lat": -33.92082723,
+    "lon": 18.42985692
+  },
+  {
+    "id": "10:347",
+    "name": "Kuyasa",
+    "lat": -34.0553875,
+    "lon": 18.691905
+  },
+  {
+    "id": "10:355",
+    "name": "Vuyani",
+    "lat": -34.03724,
+    "lon": 18.68092267
+  }
+]
 ```
 
 This endpoint retrieves our Cape Town taxi stops by route.
@@ -160,7 +140,7 @@ routeId | The ID of the route to retrieve stops for
 ## Get MyCiti stop details
 
 ```javascript
-GET: "pro.gometro.co.za/api/v1/myciti/stops/1234"
+GET: "http://proserver.gometro.co.za/api/v1/myciti/stop/10:348"
 ```
 
 ```ruby
@@ -186,40 +166,14 @@ curl "http://example.com/api/kittens/2"
 
 ```json
 {
-  "routes_announcements": [
-    {
-      "event_id": "8730289",
-      "create_date": "2017-03-02 15:31:03",
-      "creator_id": "2191264",
-      "type_id": "126",
-      "message_id": "8730288",
-      "receiver": "routes",
-      "receiver_id": "90000160",
-      "portal_id": "",
-      "target_id": "90000160",
-      "target2_id": "",
-      "use_grouping": "0",
-      "title": "Minor Delays",
-      "message": "Cancellations due to sets out of service and maintenance: Train no 0557 the 16:22 train from Cape Town to Heathfield, train no 0558 the 17:08 train from Heathfield to Cape Town, train no 0571 the 17:56 train from Cape Town to Heathfield and train no 0572 the 18:41 train from Heathfield to Cape Town. Trains on the Cape Flats line are delayed between 15-20 minutes due to ongoing technical problem at Pinelands.",
-      "user_name": "Western Cape Metrorail"
-    },
-    {
-      "event_id": "8730247",
-      "create_date": "2017-03-02 15:21:05",
-      "creator_id": "2191264",
-      "type_id": "126",
-      "message_id": "8730246",
-      "receiver": "routes",
-      "receiver_id": "90000160",
-      "portal_id": "",
-      "target_id": "90000160",
-      "target2_id": "",
-      "use_grouping": "0",
-      "title": "Other Announcement",
-      "message": "Cancellations due to sets out of service and maintenance: Train no 0557 the 16:22 train from Cape Town to Heathfield, train no 0558 the 17:08 train from Heathfield to Cape Town, train no 0571 the 17:56 train from Cape Town to Heathfield and train no 0572 the 18:41 train from Heathfield to Cape Town.",
-      "user_name": "Western Cape Metrorail"
-    }
-  ]
+  "id": "10:348",
+  "name": "Lindela",
+  "lat": -34.056993,
+  "lon": 18.69717033,
+  "locationType": 0,
+  "wheelchairBoarding": 0,
+  "vehicleType": -999,
+  "vehicleTypeSet": false
 }
 ```
 This endpoint retrieves info for a specific MyCiti stop.
